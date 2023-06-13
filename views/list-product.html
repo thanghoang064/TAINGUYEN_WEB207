@@ -15,12 +15,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>THỎ BÔNG CINNAMOROLL CÓ MỀN 2IN1</td>
-              <td>370000</td>
+            <tr ng-repeat="pr in products">
+              <td>{{ pr.name }}</td>
+              <td>{{ pr.price }}</td>
               <td>
                 <div class="actions">
-                  <button type="button" class="btn btn-primary details-button">Xóa</button>
+                  <button ng-click="onDelete(pr.id)" class="btn btn-primary details-button">Xóa</button>
                   <button type="button" class="btn btn-warning">Sửa</button>
                 </div>
               </td>

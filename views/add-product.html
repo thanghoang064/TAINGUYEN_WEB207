@@ -5,13 +5,13 @@
         <form class="add-product-form">
           <div class="form-group">
             <label for="ten">Tên:</label>
-            <input type="text" class="form-control" id="ten" required>
+            <input type="text" class="form-control" ng-model="inputValue.name" required>
           </div>
           <div class="form-group">
             <label for="gia">Giá:</label>
-            <input type="number" class="form-control" id="gia" required>
+            <input type="number" class="form-control" ng-model="inputValue.price" required>
           </div>
-          <center><button type="submit" class="btn btn-success">Thêm</button></center>
+          <center><button ng-click="onSubmitForm()" class="btn btn-success">Thêm</button></center>
         </form>
       </div>
     </div>
