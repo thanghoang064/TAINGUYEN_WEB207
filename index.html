@@ -8,6 +8,7 @@
 	<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="controllers/AddProductController.js"></script>
 	<script src="controllers/ListProductController.js"></script>
+	<script src="controllers/EditProductController.js"></script>
 </head>
 <body>
 	<div ng-app="app-route">
@@ -33,6 +34,9 @@
 			}).when('/add-product',{
 				templateUrl: 'views/add-product.html',
 				controller: AddProductController
+			}).when('/product/:id/edit', {
+				templateUrl: 'views/edit-product.html',
+				controller: EditProductController
 			})
 		})
 	</script>

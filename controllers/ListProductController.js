@@ -1,4 +1,4 @@
-window.ListProductController = function ($scope,$http) {
+window.ListProductController = function ($scope,$http, $location) {
 	
 	//tạo đường dẫn apiUrl để call tới API 
 	var apiUrl = "http://localhost:3000/products";
@@ -28,6 +28,9 @@ window.ListProductController = function ($scope,$http) {
 				}
 			)
 		}
+	}
+	$scope.onEdit = function (id) {
+		$location.path(`/product/${id}/edit`);
 	}
 	
 }
