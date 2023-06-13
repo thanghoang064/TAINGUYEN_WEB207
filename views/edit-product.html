@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 style="text-align: center;">SỬA SẢN PHẨM</h2>
+        <h1 ng-show="!product" style="color:red"> {{ message }} </h1>
+        <form class="add-product-form">
+          <div class="form-group">
+            <label for="ten">Tên:</label>
+            <input type="text" class="form-control" ng-model="inputValue.name">
+            <span ng-show="kiemTraDuLieu.name == true" style="color:red;">Vui lòng nhập tên</span>
+          </div>
+          <div class="form-group">
+            <label for="gia">Giá:</label>
+            <input type="number" class="form-control" ng-model="inputValue.price">
+            <span ng-show="kiemTraDuLieu.price == true" style="color: red;">Vui lòng nhập giá</span>
+          </div>
+          <center><button ng-click="onEditForm()" class="btn btn-success">Sửa</button></center>
+        </form>
+      </div>
+    </div>
+  </div>
+  
