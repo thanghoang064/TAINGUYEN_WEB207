@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Route trong angular</title>
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+	<link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+	<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="controllers/AddProductController.js"></script>
+	<script src="controllers/ListProductController.js"></script>
+</head>
+<body>
+	<div ng-app="app-route">
+		<header>
+			<nav class="navbar navbar-expand-lg bg-body-tertiary">
+				<div class="container-fluid">
+				  <a class="navbar-brand" href="#!/list-product">Quản lý sản phẩm</a>
+				</div>
+			  </nav>
+		</header>
+		
+		<main>
+			<!-- định nghĩa vị trí mà nội dung sẽ render ra -->
+			<div ng-view></div>
+		</main>
+	</div>
+	<script type="text/javascript">
+		//đây là nơi để điều hướng route
+		angular.module('app-route',['ngRoute']).config(function($routeProvider) {
+			$routeProvider.when('/list-product',{
+				templateUrl: 'views/list-product.html',
+				controller: ListProductController
+			}).when('/add-product',{
+				templateUrl: 'views/add-product.html',
+				controller: AddProductController
+			})
+		})
+	</script>
+</body>
+</html>

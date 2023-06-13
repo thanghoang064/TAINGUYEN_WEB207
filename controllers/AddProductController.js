@@ -1,0 +1,4 @@
+window.AddProductController = function ($scope) {
+	
+	
+}
